@@ -1,5 +1,5 @@
 # DataStructures
-Implementation of DS in various programming languages
+This repository is aimed at explaining the concepts of Data Structures in a fun way.Although Data Structures is more about understanding the concept but I hope to provide the implementation in various programming languages so that no one feels left out. you are welcome to contribute :)
 
 Folder Structure: **[DS]/[Language]/file**
 
