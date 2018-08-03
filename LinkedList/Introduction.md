@@ -45,4 +45,4 @@ And like every other thing in this world, Linked lists too have some disadvantag
 * Unlike arrays, It does not have contiguous block of memory but the *nodes are scattered in the memory*.
 * Memory is wasted in terms of extra reference points.
 
-We can dive deeper into the Arrays and Linked comparison but I assume you can easily figure that out or you can google it :)
+We can dive deeper into the Arrays and Linked list comparison but I assume you can easily figure that out or you can google it :)
