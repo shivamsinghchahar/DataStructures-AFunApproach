@@ -14,13 +14,13 @@ into the explanation now..
 
 While dealing with **Linked list** we have two things to care about:
 * data
-* pointer to the next node
+* pointer to the next element
 
 This abstract structure is known as a **node**.
 
 #### Properties of a linked list:
-* Elements are connected by pointers
-* Last element points to **NULL**
+* Nodes are connected by pointers
+* Last node points to **NULL**
 * Dynamic in nature
 
 > Note : The first node is known as **head**
@@ -28,3 +28,21 @@ This abstract structure is known as a **node**.
 #### Operations:
 * Insert an element
 * Delete an element
+* Count the number of elements
+* Delete the list (remove all elements)
+* Find n<sup>th</sup> node from the end of the list
+
+### Why Linked List?
+There are similar data structures as that of linked list which do the same thing but a little differently **e.g.** Arrays
+
+#### Advantages of using Linked list:
+* It is dynamic in nature i.e. it can shrink and expand in a constant time.
+
+And like every other thing in this world, Linked lists too have some disadvantages.
+
+#### Disadvantages:
+* It takes **O(n)** time to access an element
+* Unlike arrays, It does not have contiguous block of memory but the *nodes are scattered in the memory*.
+* Memory is wasted in terms of extra reference points.
+
+We can dive deeper into the Arrays and Linked comparison but I assume you can easily figure that out or you can google it :)
