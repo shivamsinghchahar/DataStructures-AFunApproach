@@ -11,7 +11,7 @@ struct Node {
 
 // Let's make a function that prints our list to which we need to pass the 'head' of node as an argument
 // The basic idea here is to follow the pointers and print the data
-int traverse(Node *head) {
+void traverse(Node *head) {
   // pointer of Node type to keep a track of current node
   Node *current_node = head;
   
