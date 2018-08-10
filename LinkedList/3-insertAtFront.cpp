@@ -18,7 +18,7 @@ struct Node {
 void insertAtFront(Node **head, int data) {
   Node *newNode, *current_node;
   
-  newNode = (Node*)calloc(1, sizeof(Node));
+  newNode = new Node();
   
   newNode -> data = data; // Insert data into 'newNode'
   newNode -> next = *head; // Tell 'newNode' to point to current head
@@ -36,9 +36,9 @@ void insertAtFront(Node **head, int data) {
 int main() {
   Node *head, *second, *end;
   
-  head = (Node*)calloc(1, sizeof(Node));
-  second = (Node*)calloc(1, sizeof(Node));
-  end = (Node*)calloc(1, sizeof(Node));
+  head = new Node();
+  second = new Node();
+  end = new Node();
 
   head -> data = 1;
   head -> next = second;
