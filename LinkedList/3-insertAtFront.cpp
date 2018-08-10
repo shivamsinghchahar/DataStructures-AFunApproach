@@ -6,7 +6,12 @@ struct Node {
   int data;
   Node *next;
 };
-
+/*
+  To insert a node at front of the list :
+  - Create a new node
+  - Make the new node point the head of list
+  - Update head pointer to point the new node
+*/
 // Let's make a function that takes 'head' and 'data' as arguments. Since we need to modify the head after we have connected our 'newNode'
 // to our list we need to pass double pointer for 'head'.
 
