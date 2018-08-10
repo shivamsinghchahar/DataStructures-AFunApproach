@@ -16,8 +16,8 @@ void traverse(Node *head) {
   Node *current_node = head;
   
   while(current_node != NULL) {
-    cout << current_node -> data; // To access the data member we use '->'
-    cout << current_node -> next; // Now we move to the next node
+    cout << "Data : " <<current_node -> data << endl; // To access the data member we use '->'
+    current_node = current_node -> next; // Now we move to the next node
   }
 }
 // Driver function
@@ -36,7 +36,7 @@ int main() {
   head -> next = second;
   
   second -> data = 2;
-  second -> next = third;
+  second -> next = end;
   
   end -> data = 3;
   end -> next = NULL;
