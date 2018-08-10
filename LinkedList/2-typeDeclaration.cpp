@@ -27,9 +27,9 @@ int main() {
   Node *second = NULL;
   Node *end = NULL;
   
-  head = (Node*)calloc(1, sizeof(Node)); // Allocate memory to node in the heap using 'calloc'
-  second = (Node*)calloc(1, sizeof(Node));
-  end = (Node*)calloc(1, sizeof(Node));
+  head = new Node(); // Allocate memory to node in the heap using 'calloc'
+  second = new Node();
+  end = new Node();
   
   // Let's insert data and connect our nodes together
   head -> data = 1;
