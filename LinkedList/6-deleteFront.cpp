@@ -16,14 +16,27 @@ void traverse(Node *head) {
 		current_node = current_node -> next;
 	}
 }
-
+/*
+	To delete a node from the front of linked list:
+	
+	- Create a temporary node and make it point to head of the list
+	- Now, move the head pointer to the next node
+	- delete the temporary node
+	
+	We have successfully deleted the node :)
+*/
 void deleteFront(Node **head) {
+// 	Create temporary node
 	Node *temp_node;
+// 	Point to the head
 	temp_node = *head;
+// 	Traverse to see the list before deletion
 	traverse(*head);
-
+// 	Move the head pointer to next node
 	*head = (temp_node) -> next;
+// 	Now, delete the temporary node
 	delete temp_node;
+// 	Traverse again to see the result after deletion
 	cout << "After deletion\n";
 	traverse(*head);
 }
