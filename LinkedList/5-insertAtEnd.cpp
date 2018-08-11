@@ -7,6 +7,16 @@ struct Node
 	int data;
 	Node *next;
 };
+
+void traverse(Node *head) {
+	Node *current_node = head;
+
+	while(current_node != NULL) {
+		cout << current_node -> data << endl;
+		current_node = current_node -> next;
+	}
+}
+
 /*
 	Let's insert a node at the end:
 	- First, make a new node
@@ -31,14 +41,9 @@ void insertAtEnd(Node **head, int data) {
 
 	// Update the next of last node to point to new node      
 	current_node -> next = newNode;
-	// Go back to head
-	current_node = *head;
+	
 	// Traverse and print the list
-	while(current_node != NULL) {
-	    cout << current_node -> data << endl;
-	    current_node = current_node -> next;
-	}
-	       
+	traverse(*head);       
 }
 
 int main()
