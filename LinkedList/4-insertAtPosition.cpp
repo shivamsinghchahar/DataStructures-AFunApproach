@@ -35,6 +35,14 @@ void insertAtMid(Node **head, int position, int data) {
 	newNode = new Node();
 	newNode -> data = data;
 	newNode -> next = NULL;
+
+	// Same as inserting at front
+	if(position == 1) {
+		newNode -> next = *head;
+		*head = newNode;
+		traverse(*head);
+		return;
+	}
 	// keep a track of current node
 	current_node = *head;
 
