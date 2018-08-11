@@ -7,27 +7,37 @@ struct Node
 	int data;
 	Node *next;
 };
-
+/*
+	Let's insert a node at the end:
+	- First, make a new node
+	- then, go to the last node of current list
+	- Update the next of last node to point to new node
+	- Now, our new node is added at the end of our list
+*/
 void insertAtEnd(Node **head, int data) {
 	Node *current_node, *newNode;
-	
+
 	newNode = new Node();
-	
+
 	newNode -> data = data;
 	newNode -> next = NULL;
-	
+
+	// To keep track of nodes
 	current_node = *head;
-	
+
+	// go to the last node
 	while(current_node->next != NULL)
-	       current_node = current_node -> next;
-	       
-   current_node -> next = newNode;
-   current_node = *head;
-   
-   while(current_node != NULL) {
-        cout << current_node -> data << endl;
-        current_node = current_node -> next;
-   }
+		current_node = current_node -> next;
+
+	// Update the next of last node to point to new node      
+	current_node -> next = newNode;
+	// Go back to head
+	current_node = *head;
+	// Traverse and print the list
+	while(current_node != NULL) {
+	    cout << current_node -> data << endl;
+	    current_node = current_node -> next;
+	}
 	       
 }
 
