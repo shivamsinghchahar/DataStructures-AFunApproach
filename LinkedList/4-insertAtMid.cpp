@@ -8,6 +8,15 @@ struct Node
 	Node *next;
 };
 
+void traverse(Node *head) {
+	Node *current_node = head;
+
+	while(current_node != NULL) {
+		cout << current_node -> data << endl;
+		current_node = current_node -> next;
+	}
+}
+
 /*
 	Let's assume that we have the position where we want to insert the node. Now, follow the steps given below
 	- Make a new node
@@ -29,27 +38,19 @@ void insertAtMid(Node **head, int position, int data) {
 	// keep a track of current node
 	current_node = *head;
 
-	// Traverse the list until the position is reached
-	while((current_node != NULL) && (i < position))  {
+	// Traverse the list until we reach the node which comes before the node at 'position'
+	// i.e. go to node 2 if we want to insert at position 3
+	while((current_node != NULL) && (i < position - 1))  {
 		i++;
-		
-		if(i == position) {
-			// connect new node to the node at 'position'
-			newNode -> next = current_node -> next;
-			// connect the current node to new node
-			current_node -> next = newNode;
-		}
-		
-		current_node = current_node -> next;
-		
+		current_node = current_node -> next;	
 	}
-	// Point to head again	
-	current_node = *head;
+	// connect new node to the node at 'position'
+	newNode -> next = current_node -> next;
+	// connect the current node to new node
+	current_node -> next = newNode;
+	
 	// Travese and print the list	
-	while(current_node != NULL) {
-		cout << current_node -> data << endl;
-		current_node = current_node -> next;
-	}
+	traverse(*head);
 }
 
 int main()
