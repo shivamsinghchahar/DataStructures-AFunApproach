@@ -6,6 +6,15 @@ struct Node {
   int data;
   Node *next;
 };
+
+void traverse(Node *head) {
+	Node *current_node = head;
+
+	while(current_node != NULL) {
+		cout << current_node -> data << endl;
+		current_node = current_node -> next;
+	}
+}
 /*
   To insert a node at front of the list :
   - Create a new node
@@ -19,18 +28,14 @@ void insertAtFront(Node **head, int data) {
   Node *newNode, *current_node;
   
   newNode = new Node();
-  
   newNode -> data = data; // Insert data into 'newNode'
   newNode -> next = *head; // Tell 'newNode' to point to current head
+  
   // Update head pointer to point to 'newNode'  
   *head = newNode;
-  // current_node points to new 'head' now  
-  current_node = *head;
+  
   // traverse the list
-  while(current_node != NULL) {
-    cout << current_node -> data << endl;
-    current_node = current_node -> next;
-  }
+  traverse(*head);
 }
 
 int main() {
