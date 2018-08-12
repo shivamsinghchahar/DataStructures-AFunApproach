@@ -13,7 +13,7 @@ using namespace std;
 	- More pointer operations while inserting or deleting a node
 */
 
-struct DNode
+struct Node
 {
 	int data;
 	Node *prev;
