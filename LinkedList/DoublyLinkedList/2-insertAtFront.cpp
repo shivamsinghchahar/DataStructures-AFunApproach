@@ -19,18 +19,30 @@ void traverse(Node *head) {
 	
 	cout << endl;
 }
+/*
+	This is quite similar to what we did in singly linked list. To insert a node at front:
 
+	- Make a new node
+	- Set its *prev to NULL
+	- Make it point the head of list
+	- Make the *prev of head node point new node
+	- Move the head pointer to new node
+
+*/
 
 void insertAtFront(Node **head, int data) {
 	Node *newNode;
 
+	traverse(*head);
+//  Initialize the newNode
 	newNode = new Node();
 	newNode -> data = data;
 	newNode -> prev = NULL;
+//	Make the *prev of head node point to newNode 		
+	(*head) -> prev = newNode;
+//	Make the newNode point to head node	
 	newNode -> next = *head;
-	
-	traverse(*head);
-	
+//  Move the head pointer to newNode
 	*head = newNode;
 	
 	traverse(*head);
