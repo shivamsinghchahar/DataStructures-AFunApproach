@@ -20,19 +20,28 @@ void traverse(Node *head) {
 	cout << endl;
 }
 /*
-	
+	To delete the head node :
+
+	- Create a temporary node
+	- Move the head pointer ahead
+	- Make the *prev of new head point to NULL
+	- Dispose the temporary node
+
 */
 
 void deleteFront(Node **head) {
 	Node *tempNode;
 
 	traverse(*head);
-
+//  Make the temporary node point to head
 	tempNode = *head;
-	
+//  Move the head pointer ahead 
 	*head = tempNode -> next;
+//  Make the *prev of new head point to NULL
 	(*head) -> prev = NULL;
+//  Delete the temporary node
 	delete tempNode;
+
 	traverse(*head);
 
 }
