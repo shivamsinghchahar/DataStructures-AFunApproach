@@ -20,27 +20,52 @@ void traverse(Node *head) {
 	cout << endl;
 }
 /*
-	
+	To insert a node at any position we have to reach the node that comes before 'position'
+	or is at 'position - 1'. After that :
+
+	- Make a new node that is to be inserted and current_node to keep track of current node
+	- Traverse till we reach the node at 'position - 1'
+	- Connect the *next of newNode with the node next to current node
+	- Connect the *prev of newNode with the current node
+	- Connect the *prev of node next to current node to point the newNode
+	- Connect the *next of current node to point to new node
+
+	Yes, it could be confusing because of so many pointer operations :| 
+	But we have inserted our node in the list :)
 */
 
 void insertAtPosition(Node **head, int data, int position) {
-	Node *newNode, *current_node;
 	traverse(*head);
-	current_node = *head;
 
+	Node *newNode, *current_node;
+//  Keep track of current node
+	current_node = *head;
+//  initialize newNode
 	newNode = new Node();
 	newNode -> data = data;
+//  To insert the node at the front
+	if(position == 1) {
+		newNode -> next = current_node;
+		current_node -> prev = newNode;
+		*head = newNode;
 
+		traverse(*head);
+		return;
+	}
+//  keep track of position
 	int i = 1;
+//  Traverse till we reach the node at 'position - 1'
 	while(i < position - 1) {
 		i++;
 		current_node = current_node -> next;
 	}
-
+//  connect *next of newNode to the node at 'position'
 	newNode -> next = current_node -> next;
+//  connect *prev of newNode to current_node
 	newNode -> prev = current_node;
-
+//  connect the *prev of node at 'position' with newNode
 	(current_node -> next) -> prev = newNode;
+//  connect the *next of current_node with newNode
 	current_node -> next = newNode;
 
 	traverse(*head);
