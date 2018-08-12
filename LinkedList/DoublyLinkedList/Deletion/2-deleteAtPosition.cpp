@@ -20,8 +20,11 @@ void traverse(Node *head) {
 	cout << endl;
 }
 /*
-	To delete a node at any position we have to keep track of node that comes before the 
-	position. Follow the below steps:
+	Assuming that the node to be deleted lies between head and tail node.
+	To delete a node at any position we have to keep track of node that 
+	comes before the position. 
+
+	Follow the below steps:
 
 	- Make a temporary node and previous node
 	- Make the previous node point to head and keep the temporary node ahead of it
@@ -29,8 +32,6 @@ void traverse(Node *head) {
 	- Connect the *next of previous node with the node ahead of temporary node
 	- Connect the *prev of node that is ahead of temporary node with the previous node
 	- Delete the temporary node
-
-
 */
 
 void deleteAtPosition(Node **head, int position) {
