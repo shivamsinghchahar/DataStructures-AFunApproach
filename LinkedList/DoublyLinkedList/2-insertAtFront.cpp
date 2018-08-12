@@ -24,10 +24,11 @@ void traverse(Node *head) {
 
 	- Make a new node
 	- Set its *prev to NULL
-	- Make it point the head of list
 	- Make the *prev of head node point new node
+	- Make it point the head of list
 	- Move the head pointer to new node
-
+	
+	Successfully inserted the node at front of the list :)
 */
 
 void insertAtFront(Node **head, int data) {
