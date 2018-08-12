@@ -16,6 +16,7 @@ void traverse(Node *head) {
 		cout << current_node -> data << endl;
 		current_node = current_node -> next;
 	}
+	
 	cout << endl;
 }
 
