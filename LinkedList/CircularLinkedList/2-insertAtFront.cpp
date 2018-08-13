@@ -21,24 +21,34 @@ void traverse(Node *head) {
 }
 
 /*
-	
+	To insert the node at front, we have to traverse until we reach tail and connect
+	connect it to our new node which is at front. follow below steps:
+
+	- Make a new node and a node to keep track of current node
+	- Reach the tail node using the currentNode
+	- Make the newNode point to head
+	- connect the currentNode to newNode
+	- Move the head pointer to newNode
 */
 
 void insertAtFront(Node **head, int data) {
 	Node *newNode, *currentNode;
 
 	traverse(*head);
-
+//  point to head 
 	currentNode = *head;
-	
+//  initialize the newNode
 	newNode = new Node();
 	newNode -> data = data;	
+// 	Reach the tail node
 	while(currentNode -> next != (*head))
 		currentNode = currentNode -> next;	
 
-	
+//  connect the newNode to head
 	newNode -> next = *head;
+//  Connect the tail node(currentNode) to newNode
 	currentNode -> next = newNode;
+//  Move the head pointer to newNode
 	*head = newNode;
 
 	traverse(*head);
