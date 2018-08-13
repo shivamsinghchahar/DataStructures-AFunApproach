@@ -18,7 +18,7 @@ While dealing with **Linked list** we have two things to care about:
 
 This abstract structure is known as a **node**.
 
-#### Properties of a linked list:
+#### Properties Of A Linked List:
 * Nodes are connected by pointers
 * Last node points to **NULL**
 * Dynamic in nature
@@ -35,7 +35,7 @@ This abstract structure is known as a **node**.
 ### Why Linked List?
 There are similar data structures as that of linked list which do the same thing but a little differently **e.g.** Arrays
 
-#### Advantages of using Linked list:
+#### Advantages Of Using Linked List:
 * It is dynamic in nature i.e. it can shrink and expand in a constant time.
 
 And like every other thing in this world, Linked lists too have some disadvantages.
