@@ -21,14 +21,15 @@ void traverse(Node *head) {
 }
 
 /*
-	To insert the node at end, we need to go to the tail node and connect our tail
-	node to new node. Also, we need to connect the new node to head. Follow below 
-	Steps:
+	To delete the node at front, we need to connect our tail node to the node after
+	head node and move our head pointer ahead. then we can dispose our previous head :
 
-	- Make a newNode and currentNode
-	- Traverse until the end is reached
-	- Connect the newNode to head
-	- Connect the end node to newNode
+	- Make a temporary node to point to current head and a node to keep track of
+	  nodes while traversing
+  	- Go to tail node
+  	- Make the tail node point to next of head
+  	- Move head pointer ahead
+  	- Dispose the previous head node
 
 */
 
@@ -36,13 +37,14 @@ void deleteFront(Node **head) {
 	Node *tempNode = *head, *currentNode = *head;
 
 	traverse(*head);
-
+//  Go to tail node
 	while(currentNode -> next != *head)
 		currentNode = currentNode -> next;
-
+//  connect the tail node with the node next to head node
 	currentNode -> next = tempNode -> next;
+//  Move the head pointer ahead
 	*head = tempNode -> next;
-
+//  Dispose the previous head node
 	delete tempNode;
 
 	traverse(*head);
