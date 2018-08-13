@@ -13,7 +13,7 @@ one to be used.*
 #### Properties Of A Stack:
 * Any insertion or deletion can only be performed on top
 * It is an ordered list of same type
-* Said to be in **Overflow** state when full and **Underflowo** when empty
+* Said to be in **Overflow** state when full and **Underflow** when empty
 
 #### Operations:
 * Insert an element i.e. Push
@@ -24,12 +24,11 @@ one to be used.*
 * Check if the stack is full
 
 ### Why Stack?
-Stack is used in Scheduling high priority tasks on top. It is also used in function calls/
-recursion to keep a tack of calls. Another use can be found in compilers, they check if the
+Stack is used in Scheduling high priority tasks on top. It is also used in function calls/recursion to keep a track of calls. Another use can be found in compilers, they check if the
 parentheses are balanced or not using a stack. There can be many other examples.
 
 ### Advantages:
-* Stack allows us to add and remove element in O(1) time
+* Stack allows us to add and remove element in **O(1)** time
 
 ### Disadvantages:
 * Stack makes it hard to access an element that is not on top, we have to pop the elements to get to the element
