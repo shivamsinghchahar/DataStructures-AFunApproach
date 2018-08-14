@@ -15,10 +15,12 @@ struct Stack
 	To create stack
 */
 Stack *createStack(unsigned int capacity) {
-	Stack *stack = (Stack*)malloc(sizeof(Stack));
-
+	Stack *stack = new Stack();
+	// Set the size of stack
 	stack -> capacity = capacity;
+	// Set the top as -1 to tell that stack is empty
 	stack -> top = -1;
+	// Allocate memory to array
 	stack -> array = new int[capacity];
 
 	return stack;
