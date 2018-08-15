@@ -52,9 +52,11 @@ int pop(Stack *stack) {
 int main() {
 	Stack *stack = createStack(100);
 
-	push(stack, 10);
-    push(stack, 20);
-    push(stack, 30);
+	string s = (isEmpty(stack))?"Empty":"Not Empty";
+	cout << s << endl;
+	push(stack, 1);
+    push(stack, 2);
+    push(stack, 3);
  
     cout << "Popped: " << pop(stack) << endl;
  
