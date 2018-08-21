@@ -23,7 +23,7 @@
 *When we study data structures we just define their abstract view* 
 
 **e.g** 
->T.V. is an electronic device that can be turned on/off, it recieves signals and it supports audio/video. This is an abstract view that gives us a basic idea about T.V.
+>T.V. is an electronic device that can be turned on/off, it receives signals and it supports audio/video. This is an abstract view that gives us a basic idea about T.V.
 
 *Similarly, We define data structures as 'Abstract Data Types (or ADTs)'. Now, Let's define an abstract view for **List** ADT.* 
 
