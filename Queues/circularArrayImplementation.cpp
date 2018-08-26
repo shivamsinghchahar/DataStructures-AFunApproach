@@ -2,6 +2,24 @@
 
 using namespace std;
 
+/*
+	This implementation of Queue ADT uses an array to behave like queue. we take two
+	varibales 'front' and 'rear' to keep track of head and tail of queue. when we
+	have to add and element, we increment 'rear' and when we delete an element we
+	increment 'front'.
+
+	Why circular array?
+	-	When we delete an element from the queue (implemented as array). we move the
+		'front' leaving an empty space at the front. So, when we add an elements at
+		'rear' and while doing so we run out of empty blocks at rear but the front
+		has empty blocks that can't be used. So, how do we use those blocks at front?
+		yeah, how about connecting the front and rear. Now, if I have to move from
+		rear to front I would do : rear = (rear + 1) % (size of queue) e.g. rear = 9
+		and size of queue is 10. now we have to go to 0 index and we can do that by
+		using the above operation.
+*/
+
+
 struct Queue {
 	int front, rear;
 	int size;
