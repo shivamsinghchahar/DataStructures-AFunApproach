@@ -22,7 +22,7 @@ struct Node
 	Node *left;
 	Node *right;
 };
-// Recursive approach to PreOrder traversal
+// Recursive approach to InOrder traversal
 void InOrder(Node *currentNode) {
 	if (currentNode) {
 		// Move to left subtree
