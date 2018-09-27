@@ -1,5 +1,6 @@
 /*
-	
+	In level order traversal, we visit the root and while traversing the level 'l'
+	keep all the elements at level 'l+1' in queue.
 */
 
 #include <bits/stdc++.h>
@@ -16,7 +17,7 @@ struct Node
 void levelOrder(Node *currentNode) {
 	Node *temp;
 	queue <Node *> Q;
-
+	
 	if(!currentNode)
 		return;
 	Q.push(currentNode);
@@ -24,11 +25,12 @@ void levelOrder(Node *currentNode) {
 	while(!Q.empty()) {
 		temp = Q.front();
 		Q.pop();
-
+		// Process the node
 		cout << temp -> data << endl;
-
+		// Enque the left child of node
 		if(temp -> left)
 			Q.push(temp -> left);
+		// Enque the right child of node
 		if (temp -> right)
 			Q.push(temp -> right);
 	}
